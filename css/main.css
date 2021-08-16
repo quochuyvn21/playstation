@@ -1,0 +1,357 @@
+@charset "utf-8";
+/* CSS Document */
+
+.total {
+	position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    font-size: 14pt;
+    color: #2c3e50;
+    text-align: center;
+    background: #fff;
+    line-height: 1;
+	display: inline-block;
+}
+.header {
+	width: 100%;
+	height: 50px;
+    position: fixed;
+    top: 0;
+    left: 0;
+	display: flex; 
+	background-color: rgba(26,25,25,.7);
+	justify-content: space-between;
+}
+.header-list {
+    padding-left: 0;
+	padding-right: 10px;
+    margin: 5px 10px;
+}
+
+.header-item {
+    color: #fff;
+    list-style: none;
+    align-items: center;
+	margin: 0 60px;
+    display: inline-block;
+	position: relative;
+}
+/*bat dau cho cai slide*/
+.slider{
+	margin: 0 auto;
+  	width: 800px;
+  	height: 500px;
+  	overflow: hidden;
+	text-align: center;
+	border-radius: 25px;
+	background-image: url(https://unsplash.com/photos/MqiZhI5NLhQ);
+	background-repeat: no-repeat;
+	margin-top: 100px;
+
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+	
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+  width: 20%;
+  transition: 2s;
+	
+}
+
+.slide img{
+  width: 800px;
+  height: 500px;
+}
+
+/*css cho cai slide tu nhay*/
+
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #40D3DC;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/*css cho cai thanh tu dong*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+
+.navigation-auto div{
+  border: 2px solid #40D3DC;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40D3DC;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40D3DC;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40D3DC;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40D3DC;
+}
+/* het css cho cai slide met moi do roi*/
+
+/*css cho cai cards*/
+.middle {
+	width: 90%;
+	height: 500px;
+	margin: 0 auto;
+	background-color: white;
+	box-sizing: border-box;
+	margin: 50px 0px;
+	margin-left: 5%;
+
+}
+.cards {
+  --spacing: 25px;
+  --columns: 4;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: calc(-1 * var(--spacing));
+}
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  width: calc(calc(100% / var(--columns)) - var(--spacing));
+  margin-left: var(--spacing);
+  margin-bottom: var(--spacing);
+}
+.card-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.card-top {
+  padding: 25px;
+}
+.card-title {
+  font-weight: 500;
+  margin-bottom: 25px;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-word;
+}
+.card-user {
+  display: flex;
+  align-items: center;
+}
+.card-user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 100rem;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.card-user-info {
+  padding-left: 20px;
+  flex: 1;
+}
+.card-user-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2px;
+}
+.card-user-name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1;
+}
+.card-user-top ion-icon {
+  color: #20e3b2;
+  margin-left: 5px;
+}
+.card-user-game {
+  color: #999;
+  font-weight: 300;
+  font-size: 13px;
+}
+.card-bottom {
+  padding: 25px;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-live {
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+  border-radius: 10px;
+  background-color: #ff6651;
+}
+.card-live span {
+  margin-left: 10px;
+  font-size: 14px;
+}
+.card-watching {
+  font-size: 13px;
+  color: #999;
+  font-weight: 300;
+}
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.card-top {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.card-user,
+.card-bottom {
+  margin-top: auto;
+  flex-shrink: 0;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+}
+/*het css cho cai card*/
+/*next section*/
+.service{
+    width: 100%;
+    background: rgba(228,228,228,1.00);
+    padding: 50px 0 100px;
+}
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+.sv-box{
+    width: 28%;
+    height: 300px;
+    background: white;
+    padding: 67px 20px 64px;
+    display: inline-block;
+    margin: 0 10px;
+    text-align: left;
+}
+.box-icon{
+    width: 110px;
+    height: 110px;
+    background: rgba(0,32,255,1.00);
+    text-align: center;
+    border-radius: 50%;
+    border: 5px solid white;
+    transition-duration: 1s;
+}
+.box-icon img{
+    width: 50px;
+    margin-top: 30px;
+}
+.sv-box:hover .box-icon{
+    border: 10px solid grey;
+}
+.sv-box h3{
+    font-size: 24px;
+    letter-spacing: 2px;
+    margin: 20px 0 15px;
+}
+.sv-box p{
+    line-height: 1.25
+}
+.sv-outer{
+    text-align: center;
+}
+/*footer*/
+.footer {
+	width: 100%;
+	height: 450px;
+	background-color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.footer-container {
+	width: 80%;
+	height: 100%;
+	align-content: center;
+}
+.logo-footer {
+	transform: translate(-50%,-50%)
+	height: 200px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.footer-content {
+	transform: translate(-50%,-50%)
+	height: auto;
+	margin: 20px;
+}
+.social {
+	transform: translate(-50%,-50%)
+	height: auto;
+	background-color: white;
+	margin: 20px;
+}
